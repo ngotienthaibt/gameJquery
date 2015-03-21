@@ -4,10 +4,10 @@ thư mục dùng cho các dự án html
 ## The largest heading (an <h1> tag)
 ##blockquote
 > Pardon my french
-
-`<html>
+```
+<html>
   <body></body>
-<html>`
+<html>```
 ```
 x = 0
 x = 2 + 2
