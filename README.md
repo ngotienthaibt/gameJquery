@@ -19,3 +19,11 @@ thư mục dùng cho các dự án html
 * item3
 
 [ngotienthai](dantri.com)
+
+```javascript
+function() {
+  return a+b;
+  
+}
+array.slice();
+```
