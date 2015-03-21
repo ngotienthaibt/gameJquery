@@ -27,3 +27,4 @@ function() {
 }
 array.slice();
 ```
+thử xem có ghi được bằng tiếng việt không
