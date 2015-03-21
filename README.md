@@ -5,13 +5,10 @@ thư mục dùng cho các dự án html
 ##blockquote
 
 
-```
+```html
 <html>
   <body></body>
 <html>
-x = 0
-x = 2 + 2
-what is x
 ```
 
 **italic**
@@ -21,4 +18,4 @@ what is x
 * item2
 * item3
 
-
+[ngotienthai](dantri.com)
