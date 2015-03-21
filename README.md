@@ -3,7 +3,8 @@ thư mục dùng cho các dự án html
 
 ## The largest heading (an <h1> tag)
 ##blockquote
-> Pardon my french
+
+
 ```
 <html>
   <body></body>
@@ -12,5 +13,12 @@ x = 0
 x = 2 + 2
 what is x
 ```
+
 **italic**
 *bold*
+
+* item1
+* item2
+* item3
+
+
