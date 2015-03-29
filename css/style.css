@@ -1,0 +1,68 @@
+/*ngo tien thai*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+html,body {
+  height: 100%;
+  overflow: hidden;
+}
+div.container {
+  background: #02171A;
+  width: 70%;
+  height: 900px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+div.container .rotateObj {
+  width: 0px;
+  height: 0px;
+  background: white;
+  border: 150px solid #fff;
+  border-left-color: #5E0718;
+  border-right-color: #19482B;
+  border-bottom-color: #06425D;
+  border-top-color: #5C550A;
+  position: absolute; bottom: 0px; left: calc(50% - 150px);
+  transition: rotate 1s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.3s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+  
+}
+/* div.container .rotateObj:hover {
+  transform: rotate(90deg);
+} */
+div.container .bean {
+  width: 50px;
+  height: 50px;
+  background: #5E0718;
+  border-radius: 100%;
+  position: absolute;
+  left: calc(50% - 25px);
+}
+div.container .info {
+  width: 100px;
+  height: 100px;
+  background: #B78920;
+ 
+}
+div.container .info .score {
+  display: block;
+   color: #fff;
+  font-size: 3em;
+  line-height: 100px;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

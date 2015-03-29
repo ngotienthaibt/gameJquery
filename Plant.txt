@@ -1,0 +1,11 @@
+cac doi tuong: 
+
+	view: chua khung canh, mau sac, chieu cao rong cua toan trang
+	rotateObj: -cac mat,-mau sac cac mat
+		
+		-phuong thuc set mau cac mat
+		-phuong thuc rotate
+		-phuong thuc lay mau duoc chon
+	beanObj: -mau sac, kich thuoc, 
+		-phuong thuc move
+		-phuong thuc hit (khi va cham voi rotateObj)
