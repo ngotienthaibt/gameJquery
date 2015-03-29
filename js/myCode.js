@@ -4,51 +4,55 @@ $(document).ready(function(){
 
 
 var container = $('.container'),count = 0, cube = container.find('div.rotateObj'),bean = container.find('div.bean'),score = container.find('.score');
-container.data('deg', 0);
-container.data('colorIndex',0);
+//container.data('deg', 0);
+//container.data('colorIndex',0);
+
 score.text(count.toString());
 container.css({
 	height: $(window).height().toString()
 });
+
+var deg = 0,colorIndex = 0;
+
 function  rotateObj(){
 	self = this;
 	this.posi = {};
+	this.colorList = [cube.css('border-top-color'),cube.css('border-left-color'),cube.css('border-bottom-color'),cube.css('border-right-color')];
+	this.colorActive = this.colorList[colorIndex]; //top-left-bottom-right -> 0-90-180-270  360-450-540-630
+
 	this.getPosi = function(){
 		this.posi.top = cube.offset().top;
 		this.posi.left = cube.offset().left;
 	}
-		
 
 	
-	this.colorList = [cube.css('border-top-color'),cube.css('border-left-color'),cube.css('border-bottom-color'),cube.css('border-right-color')];
-
-	this.colorActive = this.colorList[container.data('colorIndex')]; //top-left-bottom-right -> 0-90-180-270  360-450-540-630
-
 	this.rotate = function() {
 		self.getPosi();
 		container.on('click', function(event) {
 			event.preventDefault();
-			document.getElementById("spin").pause();
-			document.getElementById("spin").currentTime = 0;
-			document.getElementById("spin").play();
-			var deg = $(this).data('deg');
+			var spin = document.getElementById("spin");
+			spin.pause();
+			spin.currentTime = 0;
+			spin.play();
+			//var deg = $(this).data('deg');
 				deg = deg + 90;
 
-			var degStr = deg.toString();
+			//var degStr = deg.toString();
 			cube.css({
-				transform: 'rotate('+degStr+'deg)'	
+				transform: 'rotate('+deg.toString()+'deg)'	
 			});
 
-			$(this).data('deg',deg);
-			var colorIndex = $(this).data('colorIndex');
-			if(colorIndex > 2) {
-				colorIndex = 0;
-			} else{
-				colorIndex = colorIndex+1;
-			}
+			//$(this).data('deg',deg);
+			//var colorIndex = $(this).data('colorIndex');
+			colorIndex = colorIndex>2 ?  0: colorIndex + 1;
+			// if(colorIndex > 2) {
+			// 	colorIndex = 0;
+			// } else{
+			// 	colorIndex++;
+			// }
 			self.colorActive = self.colorList[colorIndex];
-			$(this).data('colorIndex',colorIndex)
-			console.log(self.colorActive);
+			//$(this).data('colorIndex',colorIndex)
+			//console.log(self.colorActive);
 		});
 	}
 };
@@ -66,22 +70,22 @@ function beanObj(){
 	};
 	
 	this.move = function() {
-		bean.css({
-			'top': '-50px'
-		});
+
 		var check = function(){
 			if(ro.colorActive == selfb.beanColor){
 				count++;
 				score.text(count.toString());
-				document.getElementById("point").pause();
-				document.getElementById("point").currentTime=0;
-				document.getElementById("point").play();
+				var point = document.getElementById("point");
+				point.pause();
+				point.currentTime=0;
+				point.play();
 				
 			}else{
 				score.text("game over");
 				document.getElementById('die').play();
 			}
 		};
+
 		var m = function(){
 			bean.css({
 					'top': '-50px'
@@ -93,6 +97,7 @@ function beanObj(){
 			});
 		}
 				m();
+	
 	};
 }
 var be = new beanObj();
