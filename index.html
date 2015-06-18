@@ -14,16 +14,38 @@
 </head>
 <body>
 
-<div class="container">
-	<div class="bean">	</div>
-	<div class="info">
-		<span class="score">01</span>
+	<div class="container">
+		<div class="bean">	</div>
+		<div class="info">
+			<span class="score">01</span>
+		</div>
+		<div class="rotateObj"></div>
 	</div>
-	<div class="rotateObj"></div>
-</div>
+	<div class="play">
+		
+		<button id="play">PLAY</button>
+		<span>Click or press tab to play</span>
+		<div class="bs-wrap">
+			<span>BEST SCORE</span>
+			<span class="best-score">10</span>
+		</div>
+	</div>
+	<div class="gameover">
+		
+		<h2 id="gameover">GAME OVER</h2>
+		<button id="replay">REPLAY</button>
+		<div class="fs-wrap">
+			<span>SCORE</span>
+			<span class="final-score">10</span>
+		</div>
+		<div class="fnb-wrap">
+			<span>BEST SCORE</span>
+			<span class="fbs">20</span>
+		</div>
+	</div>
 	<audio id="die">
 		<source src="audio/sfx_die.wav"/>
-	</audio>
+	</audios>
 	<audio id="point">
 		<source src="audio/sfx_point.wav" />
 	</audio>
